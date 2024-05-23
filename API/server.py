@@ -145,10 +145,7 @@ async def single_predict(request: Request):
     df_fe = feature_engineering(df)
     df_encoded = data_encoding(df_fe)
     df_encoded.drop(['credit_card_situation', 'is_active_member'], axis=1, inplace=True)
-    print(df_encoded)
     X_test = df_encoded.to_numpy()
-    print(X_test)
-    print(X_test.shape)
     
     # Predict
     y_pred = model.predict(X_test)
