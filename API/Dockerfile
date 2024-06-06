@@ -1,6 +1,6 @@
 # Set the base image (for a simple deploy use the python image with your needed version)
 # Use command FROM
-FROM python:3.12.13
+FROM python:3.12.3
 
 # Copy all files that you need for your workdir (your name choice)
 COPY ./requirements.txt /work_dir/
